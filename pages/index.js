@@ -1,15 +1,12 @@
-import Head from 'next/head'
-import { h1Style } from '../shared/typography'
+import { fontStyles } from "../shared/variables"
 
 const Home = () => (
-  <>
-    <Head>
-      <title>Emotion using the vanilla version supporting SSR</title>
-    </Head>
-    <div>
-      <h1 className={h1Style}>Emotion Vanilla example</h1>
-    </div>
-  </>
+  <div>
+    <h1 css={fontStyles.h1}>
+      Mirim Yu <br />
+      FrontEnd Developer
+    </h1>
+  </div>
 )
 
 export default Home
