@@ -1,15 +1,5 @@
 import { css, cx, keyframes, injectGlobal } from '@emotion/css'
 
-injectGlobal`
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    background: #DFCFBE;
-    font-family: Helvetica, sans-serif;
-  }
-`
-
 const basicStyles = css`
   background-color: white;
   color: cornflowerblue;
