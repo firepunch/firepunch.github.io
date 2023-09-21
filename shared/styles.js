@@ -4,20 +4,12 @@ import { colors, fontStyles, spacing } from './variables';
 export const globalStyles = (
   <Global
     styles={[
-      // {
-      //   "@font-face": {
-      //     fontFamily: 'Mona Sans',
-      //     src: 'url("/static/Mona-Sans.woff2") format("woff2 supports variations"), url("/static/Mona-Sans.woff2") format("woff2-variations")',
-      //     fontWeight: '200 900',
-      //     fontStretch: '75% 125%',
-      //   },
-      // },
       {
         "*": {
           boxSizing: 'border-box',
         },
         "html": {
-          fontFamily: 'Helvetica, sans-serif',
+          fontFamily: 'Inter, Mona Sans, sans-serif',
           background: colors.black,
           color: colors.white,
           margin: 0,

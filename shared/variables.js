@@ -30,7 +30,7 @@ export const fontStyles = {
   navigation: '1.2rem',
   singleHeader: '2.4rem',
   body: {
-    fontWeight: '400',
+    fontWeight: '500',
     margin: 0,
   },
   h1: css({
