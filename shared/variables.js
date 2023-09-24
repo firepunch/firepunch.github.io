@@ -1,12 +1,12 @@
 import { css } from "@emotion/react"
 
-export const breakpoints = [1024, 768]
-export const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+export const mq = [
+  `@media (min-width: 1024px)`,
+  `@media (min-width: 768px)`
+]
 
 export const spacing = {
-  sidePadding: '2.4rem',
-  gridVerticalPadding: '3rem',
-  gridHorizontalPadding: '1.4rem',
+  sidePadding: '1.5rem',
 }
 
 export const colors = {
@@ -33,7 +33,11 @@ export const fontStyles = {
     fontWeight: '500',
     margin: 0,
   },
-  h1: css({
+  selection: {
+    color: colors.black,
+    background: colors.lightBlue,
+  },
+  h1: {
     fontWeight: '700',
     fontSize: '1.3rem',
     textTransform: 'uppercase',
@@ -41,5 +45,5 @@ export const fontStyles = {
     [mq[0]]: {
       fontSize: '1.7rem',
     },
-  }),
+  },
 }

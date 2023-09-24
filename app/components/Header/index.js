@@ -1,35 +1,33 @@
 import { css } from '@emotion/css'
-import Logo from './logo.js';
+import { flexStyles } from '../../../shared/styles.js'
+import Logo from './logo.js'
 
-const Header = () => (
-  <header className={headerStyle}>
-    <Logo className={logoStyle} />
-    <nav className={navStyle}>
-      <a href="/projects" className={navLinkStyle}>Projects</a>
-      <a href="/projects" className={navLinkStyle}>About</a>
-    </nav>
-  </header>
-)
+export default function Header() {
+  return (
+    <header className={headerStyles.self}>
+      <Logo className={headerStyles.logo} />
+      <nav className={headerStyles.nav}>
+        <a href="/projects" className={headerStyles.navLink}>Projects</a>
+        <a href="/about" className={headerStyles.navLink}>About</a>
+      </nav>
+    </header>
+  )
+}
 
-const headerStyle = css({
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center'
-})
-
-const logoStyle = css({
-  width: '4rem'
-})
-
-const navStyle = css`
-
-`
-
-const navLinkStyle = css`
-  &:after {
-    content: ', ';
+const headerStyles = {
+  self: css({
+    ...flexStyles(true),
+    marginBottom: '1.5rem',
+  }),
+  logo: css({
+    width: '1.7rem'
+  }),
+  nav: css({
+  }),
+  navLink: css`
+  text-transform: uppercase;
+  &:not(:last-child) {
+    padding-right: 1rem;
   }
 `
-
-export default Header
+}

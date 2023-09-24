@@ -2,6 +2,7 @@ import * as React from 'react'
 import Head from 'next/head'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
+
 import Footer from '../app/components/Footer'
 import Header from '../app/components/Header/index'
 import { globalStyles } from '../shared/styles'
