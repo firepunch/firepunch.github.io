@@ -1,14 +1,17 @@
+import React from 'react'
 import { css } from '@emotion/css'
 import { fontStyles } from "../shared/variables"
+import Hero from './_Hero'
+import Projects from './_Projects'
+import About from './_About'
 
 export default function Home() {
   return (
-    <div>
-      <h1 className={homeStyles.h1}>
-        Firepunch <br />
-        FrontEnd Developer
-      </h1>
-    </div>
+    <>
+      <Hero />
+      <Projects />
+      <About />
+    </>
   )
 }
 
