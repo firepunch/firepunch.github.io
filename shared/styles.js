@@ -29,7 +29,7 @@ export const globalStyles = (
           padding: spacing.sidePadding
         },
         "section": {
-          padding: `5rem ${spacing.sidePadding} 0`,
+          // padding: `5rem ${spacing.sidePadding} 0`,
         },
         "::-moz-selection": fontStyles.selection,
         "::selection": fontStyles.selection,
