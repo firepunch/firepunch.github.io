@@ -5,10 +5,11 @@ import Image from 'next/image'
 import path from 'path'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import sizeOf from 'image-size'
 
 import ProjectCard from '../app/components/ProjectCard'
 
-export default function Project({ post }) {
+export default function Project({ post, imageSizes }) {
   return (
     <>
       <section className={projectStyles.self}>
@@ -20,9 +21,15 @@ export default function Project({ post }) {
 
         <ReactMarkdown
           components={{
-            img: props => (
-              <Image src={props.src} alt={props.alt} width={1200} height={200} />
-            )
+            img: props => {
+              if (imageSizes[props.src]) {
+                const { src, alt } = props
+                const { width, height } = imageSizes[props.src]
+                return <Image src={src} alt={alt} width={width} height={height} />
+              } else {
+                return <img {...props} />
+              }
+            }
           }}>
           {post.contentMarkdown}
         </ReactMarkdown>
@@ -52,10 +59,26 @@ export async function getPostBySlug(slug) {
 
 export async function getStaticProps({ params }) {
   const post = await getPostBySlug(params.slug)
+  const imageSizes = {}
+
+  // A regular expression to iterate on all images in the post
+  const iterator = post.contentMarkdown.matchAll(/\!\[.*]\((.*)\)/g)
+  let match = null
+  while (!(match = iterator.next()).done) {
+    const [, src] = match.value
+    try {
+      // Images are stored in `public`
+      const { width, height } = sizeOf(path.join('public', src))
+      imageSizes[src] = { width, height }
+    } catch (err) {
+      console.error(`Can’t get dimensions for ${src}:`, err)
+    }
+  }
 
   return {
     props: {
-      post
+      post,
+      imageSizes
     }
   }
 }
