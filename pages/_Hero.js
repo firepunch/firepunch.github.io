@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 import { fontStyles } from "../shared/variables"
-import ContactButton from '../app/components/ContactButton'
+import ContactButton from '../components/ContactButton'
 
 export default function Hero() {
   return (

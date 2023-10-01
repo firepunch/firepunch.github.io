@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { flexStyles } from '../../../shared/styles.js'
+import { flexStyles } from '../../shared/styles.js'
 import Logo from './logo.js'
 
 export default function Header() {

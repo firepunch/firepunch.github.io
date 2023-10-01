@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 import { fontStyles } from "../shared/variables"
-import ProjectCard from '../app/components/ProjectCard'
+import ProjectCard from '../components/ProjectCard'
 
 export default function Projects() {
   return (
