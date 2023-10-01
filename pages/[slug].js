@@ -1,13 +1,13 @@
 import { css } from '@emotion/css'
 import fs from 'fs'
-import matter from 'gray-matter'
+import sizeOf from 'image-size'
 import Image from 'next/image'
 import path from 'path'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import sizeOf from 'image-size'
 
-import ProjectCard from '../app/components/ProjectCard'
+import ProjectCard from '../components/ProjectCard'
+import { getPostBySlug } from '../lib/api'
 
 export default function Project({ post, imageSizes }) {
   return (
@@ -45,20 +45,8 @@ export default function Project({ post, imageSizes }) {
 
 const POSTS_PATH = path.join(process.cwd(), '_projects');
 
-export async function getPostBySlug(slug) {
-  const fullPath = path.join(POSTS_PATH, `${slug}.mdx`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const matterResult = matter(fileContents)
-
-  return {
-    slug,
-    contentMarkdown: matterResult.content,
-    ...matterResult.data,
-  }
-}
-
 export async function getStaticProps({ params }) {
-  const post = await getPostBySlug(params.slug)
+  const post = await getPostBySlug(POSTS_PATH, params.slug)
   const imageSizes = {}
 
   // A regular expression to iterate on all images in the post
