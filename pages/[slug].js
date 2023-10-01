@@ -1,38 +1,33 @@
-import React from 'react'
 import { css } from '@emotion/css'
-import { fontStyles } from "../shared/variables"
-import ProjectCard from '../app/components/ProjectCard'
-import { remark } from 'remark'
-import html from 'remark-html'
-import matter from 'gray-matter'
 import fs from 'fs'
+import matter from 'gray-matter'
+import Image from 'next/image'
 import path from 'path'
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
-export default function Project({ postData }) {
+import ProjectCard from '../app/components/ProjectCard'
+
+export default function Project({ post }) {
   return (
     <>
-      <section className="content">
-        {postData.slug}
-        <h2>{postData.title}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <section className={projectStyles.self}>
+        <h2>{post.title}</h2>
 
         <figure>
-          <img src="https://via.placeholder.com/300" alt="Thumbnail" />
+          <img src={post.banner} alt="Banner" />
         </figure>
 
-        <article>
-          <h3>Background</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores sed quod quas unde architecto repudiandae soluta, molestias labore animi mollitia ut aliquam culpa est doloribus voluptate dolore quibusdam laborum neque.</p>
-        </article>
-        <article>
-          <h3>Feature A</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores sed quod quas unde architecto repudiandae soluta, molestias labore animi mollitia ut aliquam culpa est doloribus voluptate dolore quibusdam laborum neque.</p>
-        </article>
-        <article>
-          <h3>Feature B</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores sed quod quas unde architecto repudiandae soluta, molestias labore animi mollitia ut aliquam culpa est doloribus voluptate dolore quibusdam laborum neque.</p>
-        </article>
+        <ReactMarkdown
+          components={{
+            img: props => (
+              <Image src={props.src} alt={props.alt} width={1200} height={200} />
+            )
+          }}>
+          {post.contentMarkdown}
+        </ReactMarkdown>
       </section>
+      <hr />
       <section className={projectStyles.recommend}>
         <ProjectCard />
         <ProjectCard />
@@ -41,36 +36,33 @@ export default function Project({ postData }) {
   )
 }
 
-const POSTS_PATH = path.join(process.cwd(), '_articles');
+const POSTS_PATH = path.join(process.cwd(), '_projects');
 
-export async function getPostData(slug) {
-  const fullPath = path.join(POSTS_PATH, `${slug}.md`)
+export async function getPostBySlug(slug) {
+  const fullPath = path.join(POSTS_PATH, `${slug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
 
   return {
     slug,
-    contentHtml,
+    contentMarkdown: matterResult.content,
     ...matterResult.data,
   }
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.slug)
+  const post = await getPostBySlug(params.slug)
+
   return {
     props: {
-      postData
+      post
     }
   }
 }
 
 export const getStaticPaths = async () => {
   const paths = fs.readdirSync(POSTS_PATH)
-    .map(path => path.replace(/\.md/, ''))
+    .map(path => path.replace(/\.mdx?$/, ''))
     .map(slug => ({ params: { slug } }))
 
   return {
@@ -80,6 +72,9 @@ export const getStaticPaths = async () => {
 }
 
 const projectStyles = {
-  recommend: css({
+  self: css({
+    p: {
+      color: 'red'
+    }
   })
 }
