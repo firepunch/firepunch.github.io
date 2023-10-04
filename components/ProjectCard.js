@@ -1,13 +1,20 @@
-export default function ProjectCard() {
+import Image from "next/image"
+
+export default function ProjectCard({
+  title,
+  slug,
+  date,
+  banner
+}) {
   return (
     <article>
-      <a href="#">
+      <a href={slug}>
         <figure>
-          <img src="https://via.placeholder.com/300" alt="Thumbnail" />
+          <Image src={banner} alt="Project Banner" width={300} height={300} />
         </figure>
         <div className="project-desc">
-          <h3>Project Name</h3>
-          <time>2023</time>
+          <h3>{title}</h3>
+          <time>{date}</time>
         </div>
       </a>
     </article>

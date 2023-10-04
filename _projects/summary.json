@@ -1,0 +1,21 @@
+[{
+  "title": "Cinemark",
+  "slug": "cinemark",
+  "date": "2023-09-30",
+  "banner": "/images/test_image.jpg"
+}, {
+  "title": "Cream",
+  "slug": "cream",
+  "date": "2023-09-30",
+  "banner": "/images/test_image.jpg"
+}, {
+  "title": "Ideas on Board",
+  "slug": "iob",
+  "date": "2023-09-30",
+  "banner": "/images/test_image.jpg"
+}, {
+  "title": "Madup",
+  "slug": "madup",
+  "date": "2023-09-30",
+  "banner": "/images/test_image.jpg"
+}]
