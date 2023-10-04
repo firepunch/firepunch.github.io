@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/css'
 import { fontStyles } from "../shared/variables"
+
 import Hero from './_Hero'
 import Projects from './_Projects'
 import About from './_About'

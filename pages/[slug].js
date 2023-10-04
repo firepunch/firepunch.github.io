@@ -7,7 +7,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import ProjectCard from '../components/ProjectCard'
-import { getPostBySlug } from '../lib/api'
+import { POSTS_PATH, getPostBySlug } from '../lib/api'
 
 export default function Project({ post, imageSizes }) {
   return (
@@ -43,19 +43,15 @@ export default function Project({ post, imageSizes }) {
   )
 }
 
-const POSTS_PATH = path.join(process.cwd(), '_projects');
-
 export async function getStaticProps({ params }) {
-  const post = await getPostBySlug(POSTS_PATH, params.slug)
+  const post = await getPostBySlug(params.slug)
   const imageSizes = {}
-
-  // A regular expression to iterate on all images in the post
   const iterator = post.contentMarkdown.matchAll(/\!\[.*]\((.*)\)/g)
   let match = null
+
   while (!(match = iterator.next()).done) {
     const [, src] = match.value
     try {
-      // Images are stored in `public`
       const { width, height } = sizeOf(path.join('public', src))
       imageSizes[src] = { width, height }
     } catch (err) {
