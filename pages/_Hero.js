@@ -4,7 +4,7 @@ import ContactButton from '../components/ContactButton'
 
 export default function Hero() {
   return (
-    <section className='hero'>
+    <section className='hero' id="hero">
       <h1 className={heroStyles.h1}>
         Mirim Yu <br />
         FrontEnd Developer
