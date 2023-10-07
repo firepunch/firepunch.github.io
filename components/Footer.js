@@ -17,7 +17,7 @@ export default function Footer() {
           GitHub
         </a>
       </nav>
-      <a href="#hero">Scroll to top</a>
+      <a href="#">Scroll to top</a>
       <p>©2023MirimYu</p>
     </footer>
   )
