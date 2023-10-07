@@ -12,9 +12,9 @@ const cache = createCache({ key: 'next' })
 const App = ({ Component, pageProps }) => (
   <>
     <Head>
-      <title>Mirim Yu — FrontEnd Developer</title>
+      <title>Mirim Yu — FrontEnd Engineer</title>
       <meta charSet='UTF-8' />
-      <meta name="description" content="Front-End Developer Portfolio" />
+      <meta name="description" content="Front-End Engineer Portfolio" />
       <meta name="author" content="Firepunch" />
       <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, React, Next.js, Emotion, Cypress, Testing, Jest, Storybook" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }) => (
       <link rel="manifest" href="/static/favicon/site.webmanifest" />
       <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#000000" />
     </Head>
     <CacheProvider value={cache}>
       {globalStyles}
