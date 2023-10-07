@@ -11,7 +11,7 @@ export default function Projects() {
         <h2>Featured Work</h2>
         <span>Discover</span>
       </div>
-      {projectSummary?.map(project => (
+      {projectSummary?.map(project => project.featured && (
         <ProjectCard
           key={project.slug}
           {...project}

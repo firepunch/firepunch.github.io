@@ -1,4 +1,11 @@
 [{
+  "featured": true,
+  "title": "Ideas on Board",
+  "slug": "ideas-on-board",
+  "date": "2023-09-30",
+  "banner": "/images/test_image.jpg"
+}, {
+  "featured": true,
   "title": "Cinemark",
   "slug": "cinemark",
   "date": "2023-09-30",
@@ -6,11 +13,6 @@
 }, {
   "title": "Cream",
   "slug": "cream",
-  "date": "2023-09-30",
-  "banner": "/images/test_image.jpg"
-}, {
-  "title": "Ideas on Board",
-  "slug": "iob",
   "date": "2023-09-30",
   "banner": "/images/test_image.jpg"
 }, {

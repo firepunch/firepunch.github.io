@@ -1,0 +1,31 @@
+{
+  "title": "Ideas on Board",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
+  "summary": "I.O.B is a company that specializes in providing end-to-end digital solutions and business insights tailored for the Southeast Asian market. They collaborate with companies entering or expanding within Southeast Asia, helping them develop and execute strategies for growth effectively. I worked with them to create their digital platform, with a special focus on building a base for a diverse audience.",
+  "live_link": "https://cinemark.firepunch.buzz",
+  "banner_img": "/images/test_image.jpg",
+  "launched_at": {
+    "num": "2023-09",
+    "en": "September 2023"
+  },
+  "roles": [
+    "Next.js Development",
+    "WordPress Development",
+    "Design Review",
+    "Setting Headless CMS"
+  ],
+  "features": [{
+    "name": "To continue reading, please sign in.",
+    "content": "The goal of this project was to convert visitors' actions into either membership registrations or project requests. To achieve this, I implemented a registration wall, requiring users to register for full access to the content."
+  }, {
+    "name": "Got an idea?",
+    "content": "I developed a feature called 'Idea Notes' that allows users to read posts and leave their thoughts. I created a PHP REST API that utilizes WordPress database and managed the data using Zustand on the frontend. I ensured that the layout remains consistent throughout different actions within the notes and made it possible for users to easily check ideas from their My Page."
+  }],
+  "learned": [{
+    "name": "Setting Goals for the Website",
+    "content": "Setting goals was instrumental in creating a consistent website because it provided a framework for decision-making. The process of creating and improving pages while incorporating appropriate technologies based on the current situation and objectives was enjoyable."
+  }, {
+    "name": "Meeting Customer Needs",
+    "content": "I embarked on this project due to a request from a former colleague I used to work with. When the website was completed, seeing my previous coworker, who is now a customer and the CEO of a company, genuinely delighted with the outcome, made me feel that what I do is truly fulfilling work."
+  }]
+}
