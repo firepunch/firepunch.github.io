@@ -1,5 +1,4 @@
 import { css } from '@emotion/css'
-import { fontStyles } from "../shared/variables"
 import { flexStyles } from "../shared/styles"
 
 export default function Footer() {
@@ -18,7 +17,7 @@ export default function Footer() {
         </a>
       </nav>
       <a href="#">Scroll to top</a>
-      <p>©2023MirimYu</p>
+      <p>©2023 MirimYu</p>
     </footer>
   )
 }
@@ -30,7 +29,6 @@ const footerStyles = {
     gap: '1rem'
   }),
   title: css({
-    ...fontStyles.h1,
     textAlign: 'center',
   }),
   nav: css({

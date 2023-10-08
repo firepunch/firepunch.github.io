@@ -9,15 +9,19 @@ export default function IOB() {
   return (
     <>
       <section className={projectStyles.self}>
-        <h2>{data.title}</h2>
-        <h3>{data.sub_title}</h3>
+        <h1 className={projectStyles.title}>
+          {data.title}
+        </h1>
+        <h2 className={projectStyles.subTitle}>
+          {data.sub_title}
+        </h2>
         <summary>{data.summary}</summary>
         <p>
-          Launched at
+          Launched at&nbsp;
           <time dateTime={data.launched_at.num}>{data.launched_at.en}</time>
         </p>
         <div className="roles">
-          <h4>What I Did</h4>
+          <h3>What I Did</h3>
           <ul>
             {data.roles.map(role => (
               <li>{role}</li>
@@ -34,15 +38,15 @@ export default function IOB() {
 
         {data.features?.map(feature => (
           <article>
-            {feature.name}
-            {feature.content}
+            <h3>{feature.name}</h3>
+            <p>{feature.content}</p>
           </article>
         ))}
 
         {data.learned?.map(learn => (
           <article>
-            {learn.name}
-            {learn.content}
+            <h3>{learn.name}</h3>
+            <p>{learn.content}</p>
           </article>
         ))}
       </section>
@@ -56,8 +60,14 @@ export default function IOB() {
 
 const projectStyles = {
   self: css({
-    p: {
-      color: 'red'
-    }
+    margin: '4.8rem 2.4rem',
+    lineHeight: '2.6rem'
+  }),
+  title: css({
+    fontSize: '4.3rem',
+    marginBottom: '2.8rem',
+  }),
+  subTitle: css({
+    marginBottom: '2.8rem',
   })
 }

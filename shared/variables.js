@@ -29,21 +29,14 @@ export const globalVar = {
 export const fontStyles = {
   navigation: '1.2rem',
   singleHeader: '2.4rem',
-  body: {
-    fontWeight: '500',
-    margin: 0,
-  },
   selection: {
-    color: colors.black,
-    background: colors.lightBlue,
+    color: colors.grey[100],
+    background: '#FE7171',
   },
-  h1: {
-    fontWeight: '700',
-    fontSize: '1.3rem',
-    textTransform: 'uppercase',
-    margin: 0,
-    [mq[0]]: {
-      fontSize: '1.7rem',
-    },
-  },
+  // title: {
+  //   fontSize: '1.3rem',
+  //   textTransform: 'uppercase',
+  //   margin: 0,
+
+  // },
 }

@@ -5,7 +5,9 @@ import Logo from './logo.js'
 export default function Header() {
   return (
     <header className={headerStyles.self}>
-      <Logo className={headerStyles.logo} />
+      <a href="/">
+        <Logo className={headerStyles.logo} />
+      </a>
       <nav className={headerStyles.nav}>
         <a href="/projects" className={headerStyles.navLink}>Projects</a>
         <a href="/about" className={headerStyles.navLink}>About</a>
@@ -20,7 +22,7 @@ const headerStyles = {
     marginBottom: '1.5rem',
   }),
   logo: css({
-    width: '1.7rem'
+    width: '2.4rem'
   }),
   nav: css({
   }),
