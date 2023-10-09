@@ -6,12 +6,13 @@ export const mq = [
 ]
 
 export const spacing = {
-  sidePadding: '1.5rem',
+  sidePadding: '1.4rem',
 }
 
 export const colors = {
   white: '#E4E6EB',
   black: '#18191A',
+  primary: '#0094ff',
   lightBlue: '#E5E6EE',
   grey: {
     100: '#F1F1F1',
