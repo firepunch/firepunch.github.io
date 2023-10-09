@@ -1,20 +1,56 @@
+import { css } from '@emotion/css'
 import FullImage from './FullImage'
 
 export default function ProjectCard({
-  title,
   slug,
-  date,
+  title,
+  sub_title,
   banner
 }) {
   return (
-    <article>
+    <article className={cardStyles.card}>
       <a href={`projects/${slug}`}>
-        <FullImage src={banner} alt="Project Banner" />
-        <div className="project-desc">
-          <h3>{title}</h3>
-          <time>{date}</time>
-        </div>
+        <figure className={cardStyles.thumbnailWrapper}>
+          <FullImage
+            src={banner}
+            alt="Project Banner"
+            className={cardStyles.thumbnail}
+          />
+        </figure>
+        <h3 className={cardStyles.title}>
+          {title}
+        </h3>
+        <p className={cardStyles.description}>
+          {sub_title}
+        </p>
       </a>
     </article>
   )
+}
+
+const cardStyles = {
+  card: css({
+    marginBottom: '8rem',
+  }),
+  thumbnailWrapper: css({
+    width: '100%',
+    height: '20rem',
+    marginBottom: '1rem',
+    borderRadius: '5px',
+    overflow: 'hidden'
+  }),
+  thumbnail: css({
+    height: '100%',
+    transition: 'transform .7s ease-in-out',
+    overflow: 'hidden',
+    '&:hover': {
+      transform: 'scale(1.15)',
+    }
+  }),
+  title: css({
+    marginBottom: '0.4rem',
+  }),
+  description: css({
+    fontSize: '1.6rem',
+  })
 }
