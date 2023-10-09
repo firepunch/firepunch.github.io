@@ -50,6 +50,7 @@ export default function IOB() {
           </article>
         ))}
       </section>
+              {removeProtocol(data.live_link)}
       <section className={projectStyles.recommend}>
         <ProjectCard />
         <ProjectCard />
