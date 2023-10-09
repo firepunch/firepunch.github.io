@@ -47,8 +47,8 @@ export default function IOB() {
               {removeProtocol(data.live_link)}
             </a>
           </article>
-          <figure>
-            <img src={data.banner} alt="Banner" />
+          <figure className={projectStyles.bannerImg}>
+            <FullImage src={data.banner_img} alt="Story cards from IOB" />
           </figure>
         </section>
         <section className='features'>
