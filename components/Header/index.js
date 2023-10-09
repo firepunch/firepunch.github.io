@@ -18,7 +18,9 @@ export default function Header() {
 
 const headerStyles = {
   self: css({
-    ...flexStyles(true),
+    ...flexStyles,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginBottom: '1.5rem',
   }),
   logo: css({

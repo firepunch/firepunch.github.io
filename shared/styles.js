@@ -1,11 +1,13 @@
 import { css } from '@emotion/react'
 import { colors, spacing } from './variables'
 
-export const flexStyles = (hasSpace = false) => ({
+export const flexStyles = {
   display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: hasSpace ? 'space-between' : 'center'
-})
+  justifyContent: 'center',
+  gap: '1rem'
+}
 
 export const globalStyles = css`
   * {
