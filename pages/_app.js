@@ -6,6 +6,7 @@ import { CacheProvider, Global } from '@emotion/react'
 import Footer from '../components/Footer'
 import Header from '../components/Header/index'
 import { globalStyles } from '../shared/styles'
+import ScrollToTop from '../components/ScrollToTop'
 
 const cache = createCache({ key: 'next' })
 
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps }) {
         <Global styles={globalStyles} />
         <Header />
         <main>
+          <ScrollToTop />
           <Component {...pageProps} />
         </main>
         <Footer />

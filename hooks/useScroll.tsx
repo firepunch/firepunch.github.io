@@ -1,5 +1,4 @@
 import { useLayoutEffect, useState } from 'react'
-// import {debounce} from 'lodash'
 
 const debounce = (func, timeout = 300) => {
   let timer
@@ -10,17 +9,16 @@ const debounce = (func, timeout = 300) => {
 }
 
 const useHasScroll = (): string => {
-  // TODO
+  const MINIMUM_Y = 140
+  const MAXIMUM_Y = typeof window == 'undefined' ? 0 : document.body.offsetHeight - window.innerHeight - 240
   const [scrollPos, setScrollPos] = useState(
-    (typeof window == 'undefined' || window.innerHeight > window.scrollY ) ? 'top' : window.scrollY > (document.body.offsetHeight - 280) ? 'end' : 'middle'
+    (typeof window == 'undefined' || MINIMUM_Y > window.scrollY ) ? 'top' : window.scrollY > MAXIMUM_Y ? 'end' : 'mid'
   )
 
   useLayoutEffect(() => {
-    const MINIMUM_Y = typeof window == 'undefined' ? 0 : window.innerHeight
-    const MAXIMUM_Y = typeof window == 'undefined' ? 0 : document.body.offsetHeight - 280
     const updateScroll = (): void => {
       setScrollPos(
-        MINIMUM_Y > window.scrollY ? 'top' : window.scrollY > MAXIMUM_Y ? 'end' : 'middle'
+        (typeof window == 'undefined' || MINIMUM_Y > window.scrollY ) ? 'top' : window.scrollY > MAXIMUM_Y ? 'end' : 'mid'
       )
     }
     window.addEventListener('scroll', debounce(() => updateScroll()))

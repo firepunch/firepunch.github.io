@@ -7,7 +7,7 @@ export default function ScrollToTop() {
 
   return (
     <a href="#" className={cx(styles.arrow, styles[scrollPos])}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm37.66 101.66a8 8 0 0 1-11.32 0L136 107.31V168a8 8 0 0 1-16 0v-60.69l-18.34 18.35a8 8 0 0 1-11.32-11.32l32-32a8 8 0 0 1 11.32 0l32 32a8 8 0 0 1 0 11.32Z" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm3.7 10.7c-.4.4-1 .4-1.4 0L13 11.4V15c0 .6-.4 1-1 1s-1-.4-1-1v-3.6l-1.3 1.3c-.4.4-1 .4-1.4 0c-.4-.4-.4-1 0-1.4l3-3c.4-.4 1-.4 1.4 0l3 3c.4.4.4 1 0 1.4z" /></svg>
     </a>
   )
 }
@@ -15,6 +15,7 @@ export default function ScrollToTop() {
 const styles = {
   arrow: css`
     right: ${spacing.sidePadding};
+    bottom: 1rem;
     z-index: 99;
 
     svg {
@@ -26,9 +27,8 @@ const styles = {
   top: css`
     display: none;
   `,
-  middle: css`
+  mid: css`
     position: fixed;
-    bottom: 0;
   `,
   end: css`
     position: absolute;

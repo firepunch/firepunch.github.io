@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react'
 import { css } from '@emotion/css'
 
 import projectData from '../_projects/summary.json'
-import { spacing, fontStyles } from '../shared/variables'
+import { spacing } from '../shared/variables'
 import ProjectCard from './ProjectCard'
-import ScrollToTop from './ScrollToTop'
 
 export default function NextProjects({ currentSlug }) {
   const [data, setData] = useState([])
@@ -19,7 +18,6 @@ export default function NextProjects({ currentSlug }) {
 
   return (
     <section className={projectStyles.self}>
-      <ScrollToTop />
       <h2 className={projectStyles.title}>
         Next Case
       </h2>
@@ -35,7 +33,6 @@ export default function NextProjects({ currentSlug }) {
 
 const projectStyles = {
   self: css`
-    position: relative;
     padding-left: ${spacing.doublePadding};
     padding-right: ${spacing.doublePadding};
   `,
