@@ -6,7 +6,7 @@ import Logo from '../components/Header/logo'
 export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
-      <a href="#" className={footerStyles.title}>
+      <a href="/" className={footerStyles.title}>
         Mirim Yu <Logo /><br />
         FrontEnd Engineer
       </a>
