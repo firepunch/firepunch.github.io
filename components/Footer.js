@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { flexStyles } from "../shared/styles"
+import { flexStyles } from "../shared/variables"
 
 export default function Footer() {
   return (

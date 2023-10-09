@@ -1,9 +1,15 @@
-import { css } from "@emotion/react"
-
 export const mq = [
   `@media (min-width: 1024px)`,
   `@media (min-width: 768px)`
 ]
+
+export const flexStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '1rem'
+}
 
 export const spacing = {
   sidePadding: '1.4rem',

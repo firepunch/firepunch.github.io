@@ -1,14 +1,6 @@
 import { css } from '@emotion/react'
 import { colors, spacing } from './variables'
 
-export const flexStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '1rem'
-}
-
 export const globalStyles = css`
   * {
     box-sizing: border-box;
@@ -38,7 +30,7 @@ export const globalStyles = css`
     font-size: 1.8rem;
     font-weight: 600;
   }
-  p {
+  p, figure {
     margin: 0;
   }
   ul, li {
