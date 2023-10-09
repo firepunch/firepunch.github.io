@@ -1,6 +1,5 @@
 import { css } from '@emotion/css'
 import { fontStyles } from "../shared/variables"
-import ContactButton from '../components/ContactButton'
 
 export default function About() {
   return (
@@ -9,7 +8,6 @@ export default function About() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Quibusdam reprehenderit accusantium sunt quos consectetur unde sequi repellat.
       </p>
-      <ContactButton />
     </section>
   )
 }

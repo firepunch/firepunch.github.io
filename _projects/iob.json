@@ -10,15 +10,22 @@
     "en": "September 2023"
   },
   "roles": [
+    "Headless CMS",
     "Next.js Development",
     "WordPress Development",
-    "Design Review",
-    "Setting Headless CMS"
+    "Design Review"
+  ],
+  "intro": [
+    "My work encompassed user experience, and created a scalable headless content management system (CMS) using WordPress and Next.js.",
+    "This choice was motivated by its ability to simplify content publishing for editors while ensuring a secure database and improving loading speed.",
+    "To achieve this, I developed custom REST APIs for certain features, such as notes and watch list, using PHP and the database. I also implemented server-side rendering (SSR) and server-side components."
   ],
   "features": [{
+    "img": "/images/test_image.jpg",
     "name": "To continue reading, please sign in.",
     "content": "The goal of this project was to convert visitors' actions into either membership registrations or project requests. To achieve this, I implemented a registration wall, requiring users to register for full access to the content."
   }, {
+    "img": "/images/test_image.jpg",
     "name": "Got an idea?",
     "content": "I developed a feature called 'Idea Notes' that allows users to read posts and leave their thoughts. I created a PHP REST API that utilizes WordPress database and managed the data using Zustand on the frontend. I ensured that the layout remains consistent throughout different actions within the notes and made it possible for users to easily check ideas from their My Page."
   }],

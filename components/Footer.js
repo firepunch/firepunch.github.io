@@ -1,13 +1,15 @@
 import { css } from '@emotion/css'
-import { flexStyles } from "../shared/variables"
+
+import { colors, flexStyles, fontStyles, spacing } from '../shared/variables'
+import Logo from '../components/Header/logo'
 
 export default function Footer() {
   return (
-    <footer className={footerStyles.self}>
-      <p className={footerStyles.title}>
-        Mirim Yu<br />
-        FrontEnd Developer
-      </p>
+    <footer className={footerStyles.footer}>
+      <a href="#" className={footerStyles.title}>
+        Mirim Yu <Logo /><br />
+        FrontEnd Engineer
+      </a>
       <nav className={footerStyles.nav}>
         <a href="https://www.linkedin.com/in/mirim-yu" target="_blank" rel="noopener noreferrer">
           Linkedin
@@ -16,21 +18,38 @@ export default function Footer() {
           GitHub
         </a>
       </nav>
-      <a href="#">Scroll to top</a>
-      <p>©2023 MirimYu</p>
+      <div className={footerStyles.lower}>
+        <p>Currently based in Canada</p>
+        <p>© 2023 Mirim Yu</p>
+      </div>
     </footer>
   )
 }
 
 const footerStyles = {
-  self: css({
+  footer: css({
     ...flexStyles,
+    gap: '2rem',
+    textAlign: 'center',
+    padding: `4.8rem ${spacing.doublePadding}`,
+    'a:hover': {
+      textDecoration: 'underline'
+    }
   }),
   title: css({
-    textAlign: 'center',
+    ...fontStyles.semiBold,
+    fontSize: '2.4rem',
+    display: 'block',
+    svg: {
+      width: '1.4rem',
+    },
   }),
   nav: css({
     ...flexStyles,
     flexDirection: 'row',
-  })
+  }),
+  lower: css({
+    color: colors.grey[200],
+    fontSize: '1.4rem'
+  }),
 }

@@ -1,23 +1,27 @@
 [{
   "featured": true,
-  "title": "Ideas on Board",
   "slug": "ideas-on-board",
+  "title": "Ideas on Board",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
   "date": "2023-09-30",
   "banner": "/images/test_image.jpg"
 }, {
   "featured": true,
-  "title": "Cinemark",
   "slug": "cinemark",
+  "title": "Cinemark",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
   "date": "2023-09-30",
   "banner": "/images/test_image.jpg"
 }, {
-  "title": "Cream",
   "slug": "cream",
+  "title": "Cream",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
   "date": "2023-09-30",
   "banner": "/images/test_image.jpg"
 }, {
-  "title": "Madup",
   "slug": "madup",
+  "title": "Madup",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
   "date": "2023-09-30",
   "banner": "/images/test_image.jpg"
 }]

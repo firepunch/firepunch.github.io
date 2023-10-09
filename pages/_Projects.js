@@ -6,11 +6,7 @@ import ProjectCard from '../components/ProjectCard'
 
 export default function Projects() {
   return (
-    <section className='projects'>
-      <div className={projectStyles.title}>
-        <h2>Featured Work</h2>
-        <span>Discover</span>
-      </div>
+    <section>
       {projectSummary?.map(project => project.featured && (
         <ProjectCard
           key={project.slug}
@@ -19,10 +15,4 @@ export default function Projects() {
       ))}
     </section>
   )
-}
-
-const projectStyles = {
-  title: css({
-    ...fontStyles.h1
-  })
 }

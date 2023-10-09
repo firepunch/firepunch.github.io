@@ -1,10 +1,15 @@
-import { css } from '@emotion/css'
-import { flexStyles } from '../../shared/variables'
+import { cx, css } from '@emotion/css'
+import { useRouter } from 'next/router'
+
+import { colors, flexStyles, spacing } from '../../shared/variables'
 import Logo from './logo.js'
 
 export default function Header() {
+  const { pathname } = useRouter()
+  const customCls = pathname === '/projects/ideas-on-board' && 'iob'
+
   return (
-    <header className={headerStyles.self}>
+    <header className={cx(headerStyles.header, headerStyles[customCls])}>
       <a href="/">
         <Logo className={headerStyles.logo} />
       </a>
@@ -12,24 +17,27 @@ export default function Header() {
         <a href="/projects" className={headerStyles.navLink}>Projects</a>
         <a href="/about" className={headerStyles.navLink}>About</a>
       </nav>
-    </header>
+    </header >
   )
 }
 
 const headerStyles = {
-  self: css({
+  header: css({
     ...flexStyles,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: '1.5rem',
+    padding: `1.5rem ${spacing.sidePadding}`,
+  }),
+  iob: css({
+    backgroundColor: colors.iob,
   }),
   logo: css({
-    width: '2.4rem'
+    width: '2.2rem'
   }),
   nav: css({
+    fontSize: '1.6rem'
   }),
   navLink: css`
-  text-transform: uppercase;
   &:not(:last-child) {
     padding-right: 1rem;
   }

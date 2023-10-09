@@ -1,23 +1,26 @@
 import React from 'react'
 import { css } from '@emotion/css'
-import { fontStyles } from "../shared/variables"
 
+import { spacing } from '../shared/variables'
 import Hero from './_Hero'
 import Projects from './_Projects'
-import About from './_About'
+import Contact from '../components/Contact'
 
 export default function Home() {
   return (
-    <>
+    <section className={homeStyles.home}>
       <Hero />
       <Projects />
-      <About />
-    </>
+      <Contact />
+    </section>
   )
 }
 
 const homeStyles = {
-  h1: css({
-    ...fontStyles.h1
-  })
+  home: css`
+    section {
+      margin-left: ${spacing.sidePadding};
+      margin-right: ${spacing.sidePadding};
+    }
+  `
 }
