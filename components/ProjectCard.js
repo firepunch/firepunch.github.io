@@ -29,9 +29,12 @@ export default function ProjectCard({
 }
 
 const cardStyles = {
-  card: css({
-    marginBottom: '8rem',
-  }),
+  card: css`
+    padding-bottom: 8rem;
+    &:last-child {
+      padding-bottom: 4rem;
+    }
+  `,
   thumbnailWrapper: css({
     width: '100%',
     height: '20rem',

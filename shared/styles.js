@@ -21,6 +21,9 @@ export const globalStyles = css`
     margin: 0;
     ${fontStyles.regular}
   }
+  main {
+    position: relative;
+  }
   ::-moz-selection, ::selection {
     background-color: ${colors.primary};
   }

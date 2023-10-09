@@ -1,12 +1,13 @@
 import { css } from '@emotion/css'
-import projectSummary from '../_projects/summary.json'
-import { fontStyles } from "../shared/variables"
 
 import ProjectCard from '../components/ProjectCard'
+import ScrollToTop from '../components/ScrollToTop'
+import projectSummary from '../_projects/summary.json'
 
 export default function Projects() {
   return (
-    <section>
+    <section className={projectStyles}>
+      <ScrollToTop />
       {projectSummary?.map(project => project.featured && (
         <ProjectCard
           key={project.slug}
@@ -16,3 +17,7 @@ export default function Projects() {
     </section>
   )
 }
+
+const projectStyles = css`
+  position: relative;
+`
