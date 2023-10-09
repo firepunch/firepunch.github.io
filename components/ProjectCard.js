@@ -1,4 +1,4 @@
-import Image from "next/image"
+import FullImage from './FullImage'
 
 export default function ProjectCard({
   title,
@@ -8,10 +8,8 @@ export default function ProjectCard({
 }) {
   return (
     <article>
-      <a href={slug}>
-        <figure>
-          <Image src={banner} alt="Project Banner" width={300} height={300} />
-        </figure>
+      <a href={`projects/${slug}`}>
+        <FullImage src={banner} alt="Project Banner" />
         <div className="project-desc">
           <h3>{title}</h3>
           <time>{date}</time>

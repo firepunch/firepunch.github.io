@@ -68,9 +68,14 @@ export default function IOB() {
           ))}
         </section>
       </article>
-      <section className={projectStyles.recommend}>
-        <ProjectCard />
-        <ProjectCard />
+      <section className={projectStyles.nextCase}>
+        <h2>Next Case</h2>
+        {getRandomProjects(data.slug).map(project => (
+          <ProjectCard
+            key={project.slug}
+            {...project}
+          />
+        ))}
       </section>
     </>
   )
