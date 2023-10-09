@@ -20,7 +20,7 @@ export default function Footer() {
       </nav>
       <div className={footerStyles.lower}>
         <p>Currently based in Canada</p>
-        <p>© 2023 Mirim Yu</p>
+        <p>© Mirim Yu 2023</p>
       </div>
     </footer>
   )

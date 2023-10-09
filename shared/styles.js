@@ -46,6 +46,7 @@ export const globalStyles = css`
   a {
     color: ${colors.black};
     text-decoration: none;
-    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
   }
 `

@@ -94,6 +94,8 @@ const projectStyles = {
 
       &:hover {
         color: ${colors.primary};
+        text-decoration-style: wavy;
+        text-underline-offset: 0.1em;
       }
     }
 
