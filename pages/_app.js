@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import Head from 'next/head'
 import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/react'
+import { CacheProvider, Global } from '@emotion/react'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header/index'
@@ -30,7 +30,7 @@ const App = ({ Component, pageProps }) => (
       <meta name="theme-color" content="#000000" />
     </Head>
     <CacheProvider value={cache}>
-      {globalStyles}
+      <Global styles={globalStyles} />
       <Header />
       <main>
         <Component {...pageProps} />
