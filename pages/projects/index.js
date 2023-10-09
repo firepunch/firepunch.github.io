@@ -1,14 +1,13 @@
 import { css } from '@emotion/css'
 
-export default function About() {
+export default function Projects() {
   return (
     <section>
-
     </section>
   )
 }
 
-const aboutStyles = {
+const projectStyles = {
   recommend: css({
   })
 }
