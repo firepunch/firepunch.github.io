@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, spacing } from './variables'
+import { colors, fontStyles, spacing } from './variables'
 
 export const globalStyles = css`
   * {
@@ -18,9 +18,8 @@ export const globalStyles = css`
   }
   body {
     font-size: 1.8rem;
-    font-weight: 300;
-    padding: ${spacing.sidePadding};
     margin: 0;
+    ${fontStyles.regular}
   }
   ::-moz-selection, ::selection {
     background-color: ${colors.primary};
@@ -28,10 +27,13 @@ export const globalStyles = css`
   h1, h2, h3, h4 {
     margin: 0;
     font-size: 1.8rem;
-    font-weight: 600;
+    ${fontStyles.semiBold}
   }
   p, figure {
     margin: 0;
+  }
+  img {
+    display: block;
   }
   ul, li {
     list-style: none;
@@ -41,5 +43,6 @@ export const globalStyles = css`
   a {
     color: ${colors.black};
     text-decoration: none;
+    text-underline-offset: 4px;
   }
 `

@@ -1,25 +1,24 @@
 import React from 'react'
-import ProjectCard from '../../components/ProjectCard'
 import { css } from '@emotion/css'
-import { removeProtocol } from '../../lib/utils'
-import { flexStyles } from '../../shared/styles'
-import Image from 'next/image'
 
 import data from '../../_projects/iob.json'
-import { colors } from '../../shared/variables'
+import FullImage from '../../components/FullImage'
+import { removeProtocol } from '../../lib/utils'
+import { colors, fontStyles, flexStyles, spacing } from '../../shared/variables'
+import Contact from '../../components/Contact'
+import NextProjects from '../../components/NextProjects'
 
-export default function IOB() {
+export default function IdeasOnBoard() {
   return (
     <>
-      <article className={projectStyles.self}>
-        <h1 className={projectStyles.title}>
-          {data.title}
-        </h1>
-        <h2 className={projectStyles.subTitle}>
-          {data.sub_title}
-        </h2>
-
+      <article className={projectStyles.project}>
         <section className={projectStyles.summary}>
+          <h1 className={projectStyles.title}>
+            {data.title}
+          </h1>
+          <h2>
+            {data.sub_title}
+          </h2>
           <summary>
             {data.summary}
           </summary>
@@ -32,90 +31,97 @@ export default function IOB() {
           <article>
             <h3>What I Did</h3>
             <ul>
-              {data.roles.map(role => (
-                <li>{role}</li>
+              {data.roles.map((role, idx) => (
+                <li key={`role-${idx}`}>
+                  {role}
+                </li>
               ))}
             </ul>
           </article>
           <article>
             <h3>What I Made</h3>
-            <a
-              className={projectStyles.liveLink}
-              href={data.live_link}
-              target="_blank"
-            >
+            <a href={data.live_link} target="_blank"            >
               {removeProtocol(data.live_link)}
             </a>
           </article>
-          <figure className={projectStyles.bannerImg}>
-            <FullImage src={data.banner_img} alt="Story cards from IOB" />
-          </figure>
+          <FullImage src={data.banner_img} alt="Story cards from IOB" />
+        </section>
+        <section className={projectStyles.intro}>
+          {data.intro?.map((content, idx) => (
+            <p key={`intro-${idx}`}>
+              {content}
+            </p>
+          ))}
         </section>
         <section className='features'>
-          {data.features?.map(feature => (
-            <article>
+          {data.features?.map((feature, idx) => (
+            <article key={`feature-${idx}`}>
               <h3>{feature.name}</h3>
               <p>{feature.content}</p>
             </article>
           ))}
         </section>
         <section className='learned'>
-          {data.learned?.map(learn => (
-            <article>
+          {data.learned?.map((learn, idx) => (
+            <article key={`learn-${idx}`}>
               <h3>{learn.name}</h3>
               <p>{learn.content}</p>
             </article>
           ))}
         </section>
       </article>
-      <section className={projectStyles.nextCase}>
-        <h2>Next Case</h2>
-        {getRandomProjects(data.slug).map(project => (
-          <ProjectCard
-            key={project.slug}
-            {...project}
-          />
-        ))}
-      </section>
+      <Contact />
+      <NextProjects currentSlug={data.slug} />
     </>
   )
 }
 
 const common = {
-  mb: '2.8rem'
+  mb: '2.8rem',
 }
 
 const projectStyles = {
-  self: css({
-    margin: '4.8rem 2.4rem',
+  project: css`
+    line-height: 1.4;
 
-    'a': {
-      textDecorationLine: 'underline',
-      textUnderlineOffset: '4px',
-      textDecorationColor: colors.primary,
+    h1 {
+      line-height: normal;
+    }
 
-      '&:hover': {
-        color: colors.primary,
+    a {
+      text-decoration-line: underline;
+      text-decoration-color: ${colors.primary};
+
+      &:hover {
+        color: ${colors.primary};
       }
     }
-  }),
+
+    section {
+      padding-left: ${spacing.doublePadding};
+      padding-right: ${spacing.doublePadding};
+    }
+
+    h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      margin-bottom: 2.4rem;
+    }
+  `,
   title: css({
-    fontSize: '4.3rem',
-    marginBottom: common.mb,
-  }),
-  subTitle: css({
-    marginBottom: common.mb,
+    ...fontStyles.title,
   }),
   summary: css({
     ...flexStyles,
     alignItems: 'start',
     gap: common.mb,
-
-    'h3': {
-      marginBottom: '0.4rem',
-    }
+    backgroundColor: colors.iob,
+    paddingTop: spacing.topPadding,
+    marginBottom: '4.8rem',
   }),
-  liveLink: css({
-
-  })
+  intro: css`
+    
+  `,
 }

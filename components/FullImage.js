@@ -1,6 +1,7 @@
 import Image from "next/image"
+import { css, cx } from "@emotion/css"
 
-export default function FullImage({ src, ...props }) {
+export default function FullImage({ src, className, ...props }) {
   return (
     <Image
       src={src}
@@ -8,7 +9,7 @@ export default function FullImage({ src, ...props }) {
       width={0}
       height={0}
       sizes='100vw'
-      style={{ width: '100%', height: 'auto' }}
+      className={cx(css`width: 100%; height: auto;`, className)}
       {...props}
     />
   )

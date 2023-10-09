@@ -12,7 +12,9 @@ export const flexStyles = {
 }
 
 export const spacing = {
-  sidePadding: '1.4rem',
+  topPadding: '4.8rem',
+  sidePadding: '2rem',
+  doublePadding: '2rem'
 }
 
 export const colors = {
@@ -20,10 +22,12 @@ export const colors = {
   black: '#18191A',
   primary: '#0094ff',
   lightBlue: '#E5E6EE',
+  iob: '#FFE7AD',
   grey: {
     100: '#F1F1F1',
+    130: '#D3D3D3',
     200: '#9F9F9F',
-    300: '#5E5E5E',
+    300: '#6E6D7A',
   },
 }
 
@@ -34,16 +38,19 @@ export const globalVar = {
 }
 
 export const fontStyles = {
-  navigation: '1.2rem',
-  singleHeader: '2.4rem',
-  selection: {
-    color: colors.grey[100],
-    background: '#FE7171',
+  regular: {
+    fontWeight: 300,
+    [`${mq[0]}`]: {
+      fontWeight: 400,
+    }
   },
-  // title: {
-  //   fontSize: '1.3rem',
-  //   textTransform: 'uppercase',
-  //   margin: 0,
-
-  // },
+  semiBold: {
+    fontWeight: 500,
+    [`${mq[0]}`]: {
+      fontWeight: 600,
+    }
+  },
+  title: {
+    fontSize: '4.3rem',
+  }
 }
