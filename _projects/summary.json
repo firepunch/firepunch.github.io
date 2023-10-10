@@ -3,8 +3,7 @@
   "slug": "ideas-on-board",
   "title": "Ideas on Board",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
-  "date": "2023-09-30",
-  "banner": "/images/test_image.jpg"
+  "banner_img": "/images/iob/thumbnail.webp"
 }, {
   "featured": true,
   "slug": "cinemark",
