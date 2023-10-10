@@ -22,7 +22,7 @@ export const colors = {
   black: '#18191A',
   primary: '#0094ff',
   lightBlue: '#E5E6EE',
-  iob: '#FFE7AD',
+  iob: '#182747',
   grey: {
     100: '#F1F1F1',
     130: '#D3D3D3',

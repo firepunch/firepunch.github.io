@@ -29,7 +29,7 @@ const headerStyles = {
     padding: `1.5rem ${spacing.sidePadding}`,
   }),
   iob: css({
-    backgroundColor: colors.iob,
+    // backgroundColor: colors.iob,
   }),
   logo: css({
     width: '2.2rem'

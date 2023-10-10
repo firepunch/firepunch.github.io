@@ -21,7 +21,7 @@ export const globalStyles = css`
     margin: 0;
     ${fontStyles.regular}
   }
-  main {
+  .main {
     position: relative;
   }
   ::-moz-selection, ::selection {

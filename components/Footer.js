@@ -33,7 +33,9 @@ const footerStyles = {
     textAlign: 'center',
     padding: `4.8rem ${spacing.doublePadding}`,
     'a:hover': {
-      textDecoration: 'underline'
+      textDecorationLine: 'underline',
+      textDecorationStyle: 'wavy',
+      textUnderlineOffset: '0.1em'
     }
   }),
   title: css({
