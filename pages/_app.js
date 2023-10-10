@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
       <CacheProvider value={cache}>
         <Global styles={globalStyles} />
         <Header />
-        <main>
+        <main className="main">
           <ScrollToTop />
           <Component {...pageProps} />
         </main>

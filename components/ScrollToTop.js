@@ -14,6 +14,7 @@ export default function ScrollToTop() {
 
 const styles = {
   arrow: css`
+    display: none;
     right: ${spacing.sidePadding};
     bottom: 1rem;
     z-index: 99;
@@ -28,10 +29,13 @@ const styles = {
     display: none;
   `,
   mid: css`
+    display: block;
     position: fixed;
   `,
   end: css`
+    display: block;
     position: absolute;
+    right: ${spacing.sidePadding};
     bottom: -2rem;
   `,
 }
