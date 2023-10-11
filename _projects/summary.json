@@ -2,25 +2,26 @@
   "featured": true,
   "slug": "ideas-on-board",
   "title": "Ideas on Board",
+  "link": "https://iob.team",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
   "banner_img": "/images/iob/thumbnail.webp"
 }, {
   "featured": true,
-  "slug": "cinemark",
+  "slug": null,
+  "title": "Walkies",
+  "link": "https://goforwalkies.bcitwebdeveloper.ca",
+  "sub_title": "Curating business content to enter the Southeast Asian market.",
+  "banner_img": "/images/walkies/thumbnail.webp"
+}, {
+  "slug": null,
   "title": "Cinemark",
+  "link": "https://cinemark.firepunch.buzz",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
-  "date": "2023-09-30",
-  "banner": "/images/test_image.jpg"
+  "banner_img": "/images/cinemark/thumbnail.webp"
 }, {
-  "slug": "cream",
-  "title": "Cream",
+  "slug": null,
+  "title": "Creame",
+  "link": "https://play.google.com/store/apps/details?id=in.creame",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
-  "date": "2023-09-30",
-  "banner": "/images/test_image.jpg"
-}, {
-  "slug": "madup",
-  "title": "Madup",
-  "sub_title": "Curating business content to enter the Southeast Asian market.",
-  "date": "2023-09-30",
-  "banner": "/images/test_image.jpg"
+  "banner_img": "/images/creame_thumb.webp"
 }]
