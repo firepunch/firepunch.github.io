@@ -22,14 +22,12 @@ export default function IdeasOnBoard() {
           <summary>
             {data.summary}
           </summary>
-          <article>
-            <h3>Launched</h3>
+          <article className={projectStyles.detail}>
+            <strong>Launched</strong>
             <time dateTime={data.launched_at.num}>
               {data.launched_at.en}
             </time>
-          </article>
-          <article>
-            <h3>What I Did</h3>
+            <strong>What I Did</strong>
             <ul>
               {data.roles.map((role, idx) => (
                 <li key={`role-${idx}`}>
@@ -37,9 +35,7 @@ export default function IdeasOnBoard() {
                 </li>
               ))}
             </ul>
-          </article>
-          <article>
-            <h3>What I Made</h3>
+            <strong>What I Made</strong>
             <a href={data.live_link} target="_blank"            >
               {removeProtocol(data.live_link)}
             </a>
@@ -103,11 +99,19 @@ const projectStyles = {
     a: wavyLink
   }),
   intro: css({
-    h3: {
-      marginBottom: '0.4rem',
-    },
     'p:not(p:last-child)': {
       marginBottom: '2.4rem'
+    }
+  }),
+  detail: css({
+    fontSize: '1.6rem',
+    strong: {
+      display: 'block',
+      margin: '2rem 0 0.4rem',
+      ...fontStyles.semiBold,
+      '&:first-child': {
+        marginTop: 0,
+      }
     }
   }),
   title: css({
