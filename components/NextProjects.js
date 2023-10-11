@@ -23,7 +23,7 @@ export default function NextProjects({ currentSlug }) {
       </h2>
       {data.map(project => (
         <ProjectCard
-          key={project.slug}
+          key={project.link}
           {...project}
         />
       ))}

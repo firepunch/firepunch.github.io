@@ -10,7 +10,7 @@ export default function Projects() {
     <section>
       {data?.map(project => project.featured && (
         <ProjectCard
-          key={project.slug}
+          key={project.link}
           {...project}
         />
       ))}

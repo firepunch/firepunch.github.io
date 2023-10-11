@@ -13,7 +13,7 @@ export default function Projects() {
         <h1 className={projectStyles.title}>PROJECTS</h1>
         {data?.map(project => (
           <ProjectCard
-            key={project.slug}
+            key={project.link}
             {...project}
           />
         ))}

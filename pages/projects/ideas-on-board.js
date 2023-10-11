@@ -6,7 +6,7 @@ import Contact from '../../components/Contact'
 import FullImage from '../../components/FullImage'
 import NextProjects from '../../components/NextProjects'
 import { removeProtocol } from '../../lib/utils'
-import { colors, flexStyles, fontStyles, spacing, wavyLink } from '../../shared/variables'
+import { flexStyles, fontStyles, spacing, wavyLink } from '../../shared/variables'
 
 export default function IdeasOnBoard() {
   return (
