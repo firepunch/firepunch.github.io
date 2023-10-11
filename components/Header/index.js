@@ -1,7 +1,7 @@
 import { cx, css } from '@emotion/css'
 import { useRouter } from 'next/router'
 
-import { colors, flexStyles, spacing } from '../../shared/variables'
+import { colors, flexStyles, fontStyles, spacing } from '../../shared/variables'
 import Logo from './logo.js'
 
 export default function Header() {
@@ -27,6 +27,7 @@ const headerStyles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: `1.5rem ${spacing.sidePadding}`,
+    ...fontStyles.semiBold,
   }),
   iob: css({
     // backgroundColor: colors.iob,
@@ -38,8 +39,8 @@ const headerStyles = {
     fontSize: '1.6rem'
   }),
   navLink: css`
-  &:not(:last-child) {
-    padding-right: 1rem;
-  }
-`
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+  `
 }
