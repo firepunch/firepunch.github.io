@@ -3,10 +3,10 @@ import Head from 'next/head'
 import createCache from '@emotion/cache'
 import { CacheProvider, Global } from '@emotion/react'
 
+import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Header from '../components/Header/index'
-import { globalStyles } from '../shared/styles'
 import ScrollToTop from '../components/ScrollToTop'
+import { globalStyles } from '../shared/styles'
 
 const cache = createCache({ key: 'next' })
 
