@@ -32,10 +32,10 @@ export default function NextProjects({ currentSlug }) {
 }
 
 const projectStyles = {
-  self: css`
-    padding-left: ${spacing.doublePadding};
-    padding-right: ${spacing.doublePadding};
-  `,
+  self: css({
+    padding: `0 ${spacing.doublePadding}`,
+    marginBottom: '8rem'
+  }),
   title: css({
     fontSize: '2.4rem',
     marginBottom: '1rem'

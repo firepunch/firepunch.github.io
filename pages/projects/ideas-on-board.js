@@ -6,7 +6,7 @@ import Contact from '../../components/Contact'
 import FullImage from '../../components/FullImage'
 import NextProjects from '../../components/NextProjects'
 import { removeProtocol } from '../../lib/utils'
-import { colors, flexStyles, fontStyles, spacing } from '../../shared/variables'
+import { colors, flexStyles, fontStyles, spacing, wavyLink } from '../../shared/variables'
 
 export default function IdeasOnBoard() {
   return (
@@ -93,25 +93,14 @@ const common = {
 
 const projectStyles = {
   project: css({
-    lineHeight: 1.4,
     ...flexStyles,
     gap: '4.8rem',
+    lineHeight: 1.4,
     section: {
       paddingLeft: spacing.doublePadding,
       paddingRight: spacing.doublePadding,
     },
-    h1: {
-      lineHeight: 'normal',
-    },
-    a: {
-      textDecorationLine: 'underline',
-      textDecorationColor: colors.primary,
-      '&:hover': {
-        color: colors.primary,
-        textDecorationStyle: 'wavy',
-        textUnderlineOffset: '0.1em',
-      }
-    }
+    a: wavyLink
   }),
   intro: css({
     h3: {
@@ -123,6 +112,7 @@ const projectStyles = {
   }),
   title: css({
     ...fontStyles.title,
+    lineHeight: 'normal',
   }),
   summary: css({
     ...flexStyles,
@@ -130,9 +120,9 @@ const projectStyles = {
     gap: common.mb,
     paddingTop: spacing.topPadding,
   }),
-  intro_img: css`
-    border-radius: 1rem;
-  `,
+  intro_img: css({
+    borderRadius: '1rem',
+  }),
   article: css({
     ...flexStyles,
     alignItems: 'start',

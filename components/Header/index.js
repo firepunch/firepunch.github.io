@@ -14,8 +14,7 @@ export default function Header() {
         <Logo className={headerStyles.logo} />
       </a>
       <nav className={headerStyles.nav}>
-        <a href="/projects" className={headerStyles.navLink}>Projects</a>
-        <a href="/about" className={headerStyles.navLink}>About</a>
+        <a href="/projects" className={headerStyles.navLink}>VIEW ALL</a>
       </nav>
     </header >
   )

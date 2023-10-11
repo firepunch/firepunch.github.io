@@ -5,11 +5,19 @@ export default function ProjectCard({
   slug,
   title,
   sub_title,
+  link,
   banner_img
 }) {
+  const aProps = slug ? {
+    href: `projects/${slug}`,
+  } : {
+    href: link,
+    target: '_blank'
+  }
+
   return (
     <article className={cardStyles.card}>
-      <a href={`projects/${slug}`}>
+      <a {...aProps}>
         <figure className={cardStyles.thumbnailWrapper}>
           <FullImage
             src={banner_img}
@@ -29,17 +37,18 @@ export default function ProjectCard({
 }
 
 const cardStyles = {
-  card: css`
-    padding-bottom: 8rem;
-    &:last-child {
-      padding-bottom: 4rem;
+  card: css({
+    marginBottom: '8rem',
+    '&:last-child': {
+      marginBottom: 0
     }
-  `,
+  }),
   thumbnailWrapper: css({
     width: '100%',
+    backgroundColor: 'black',
     marginBottom: '1rem',
     borderRadius: '1rem',
-    overflow: 'hidden'
+    overflow: 'hidden',
   }),
   thumbnail: css({
     height: '100%',

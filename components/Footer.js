@@ -40,7 +40,7 @@ const footerStyles = {
   }),
   title: css({
     ...fontStyles.semiBold,
-    fontSize: '2.4rem',
+    fontSize: '2.6rem',
     display: 'block',
     svg: {
       width: '1.4rem',
