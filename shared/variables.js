@@ -54,3 +54,13 @@ export const fontStyles = {
     fontSize: '4.3rem',
   }
 }
+
+export const wavyLink = {
+  textDecorationLine: 'underline',
+  textDecorationColor: colors.primary,
+  '&:hover': {
+    color: colors.primary,
+    textDecorationStyle: 'wavy',
+    textUnderlineOffset: '0.1em',
+  }
+}
