@@ -15,7 +15,9 @@ export default function ScrollToTop() {
         styles[scrollPos],
         scrollPos === 'end' && isProjectDetail && styles.noContact
       )}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm3.7 10.7c-.4.4-1 .4-1.4 0L13 11.4V15c0 .6-.4 1-1 1s-1-.4-1-1v-3.6l-1.3 1.3c-.4.4-1 .4-1.4 0c-.4-.4-.4-1 0-1.4l3-3c.4-.4 1-.4 1.4 0l3 3c.4.4.4 1 0 1.4z" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width={60} height={60} viewBox="0 0 24 24" opacity={0.2}>
+        <path d="m11.998 21.995c5.517 0 9.997-4.48 9.997-9.997 0-5.518-4.48-9.998-9.997-9.998-5.518 0-9.998 4.48-9.998 9.998 0 5.517 4.48 9.997 9.998 9.997zm4.843-8.211c.108.141.157.3.157.456 0 .389-.306.755-.749.755h-8.501c-.445 0-.75-.367-.75-.755 0-.157.05-.316.159-.457 1.203-1.554 3.252-4.199 4.258-5.498.142-.184.36-.29.592-.29.23 0 .449.107.591.291z" fillRule="nonzero" />
+      </svg>
     </a>
   )
 }
@@ -30,7 +32,7 @@ const styles = {
     svg {
       width: 6rem;
       height: 6rem;
-      opacity: 0.2;
+      opacity: 0.1;
     }
   `,
   top: css`

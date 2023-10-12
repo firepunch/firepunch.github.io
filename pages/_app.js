@@ -36,8 +36,8 @@ export default function App({ Component, pageProps }) {
         <Global styles={globalStyles} />
         <Header />
         <main className="main">
-          <ScrollToTop />
           <Component {...pageProps} />
+          <ScrollToTop />
         </main>
         <Footer />
         <div className="g-container">
