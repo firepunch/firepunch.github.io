@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { spacing, flexStyles, mq } from '../../shared/variables'
 import EmailButton from './EmailButton'
 
-export default function Contact() {
+export default function Contact({ className }) {
   return (
-    <section className={contactStyles.self}>
+    <section className={cx(contactStyles.self, className)}>
       <h2 className={cx(contactStyles.title, contactStyles.font)}>
         Let's work together
         <Image src="/images/hands_icon.svg" alt="Raise hands icon" width={30} height={30} />
