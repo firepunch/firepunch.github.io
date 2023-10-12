@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { colors, mq, wavyLink, flexStyles } from '../shared/variables'
 import data from '../_projects/summary.json'
 import ProjectCard from '../components/ProjectCard'
+import MadupLogo from './madup_logo.svg'
 
 export default function Projects() {
   return (
@@ -16,7 +17,7 @@ export default function Projects() {
         />
       ))}
       <article className={cx(workStyles.card, 'madup')}>
-        <Image src="/images/madup_logo.svg" alt="Madup Logo" className={workStyles.logo} width={110} height={130} />
+        <Image src={MadupLogo} alt="Madup Logo" className={workStyles.logo} />
         <h3 className={workStyles.title}>Madup</h3>
         <p className={workStyles.description}>
           Early on at <a href="https://madup.com/en.html" target="_blank">Madup</a> I built main products for both internal and <a href="https://lever.me" target="_blank">external</a> users and <a href="https://tech.madup.com/">blog</a>.
@@ -98,6 +99,8 @@ const workStyles = {
   }),
   logo: css({
     position: 'absolute',
+    width: '11rem',
+    height: '13rem',
     right: '2rem',
     bottom: 0,
     opacity: 0.2,

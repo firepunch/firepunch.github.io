@@ -9,7 +9,7 @@ export default function FullImage({ src, className, ...props }) {
       width={0}
       height={0}
       sizes='100vw'
-      className={cx(css`width: 100%; height: auto;`, className)}
+      className={cx(css`width: 100%; max-width: 100%; height: auto;`, className)}
       {...props}
     />
   )
