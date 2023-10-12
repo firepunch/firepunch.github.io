@@ -1,5 +1,5 @@
 import { css, cx } from '@emotion/css'
-import { mq } from '../shared/variables'
+import { colors, mq } from '../shared/variables'
 import FullImage from './FullImage'
 
 export default function ProjectCard({
@@ -44,11 +44,14 @@ const cardStyles = {
     marginBottom: '8rem',
     '&:last-child': {
       marginBottom: 0
+    },
+    [`${mq[0]}`]: {
+      marginBottom: 0,
     }
   }),
   thumbnailWrapper: css({
     width: '100%',
-    backgroundColor: 'black',
+    backgroundColor: colors.grey[130],
     marginBottom: '1rem',
     borderRadius: '1rem',
     overflow: 'hidden',
@@ -58,7 +61,7 @@ const cardStyles = {
     transition: 'transform .7s ease-in-out',
     overflow: 'hidden',
     '&:hover': {
-      transform: 'scale(1.15)',
+      transform: 'scale(1.2)',
     }
   }),
   title: css({
