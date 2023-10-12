@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import createCache from '@emotion/cache'
 import { CacheProvider, Global } from '@emotion/react'
+import Script from 'next/script'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -39,6 +40,17 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
         <Footer />
+        <div className="g-container">
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-8SMRLKC8LP" />
+          <Script id="google-analytics">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8SMRLKC8LP');
+          `}
+          </Script>
+        </div>
       </CacheProvider>
     </>
   )
