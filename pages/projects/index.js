@@ -32,10 +32,6 @@ const projectStyles = {
       gap: '4rem',
       gridTemplateColumns: '1fr 1fr',
       gridTemplateRows: 'auto',
-
-      article: {
-        marginBottom: 0
-      }
     }
   }),
   title: css({
