@@ -93,8 +93,8 @@ const projectStyles = {
     gap: '4.8rem',
     lineHeight: 1.4,
     section: {
-      paddingLeft: spacing.doublePadding,
-      paddingRight: spacing.doublePadding,
+      paddingLeft: spacing.sidePadding,
+      paddingRight: spacing.sidePadding,
     },
     a: wavyLink
   }),
@@ -115,7 +115,7 @@ const projectStyles = {
     }
   }),
   title: css({
-    ...fontStyles.title,
+    fontSize: '4.3rem',
     lineHeight: 'normal',
   }),
   summary: css({

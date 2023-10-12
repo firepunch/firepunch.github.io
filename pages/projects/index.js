@@ -13,7 +13,7 @@ export default function Projects() {
         <h1 className={projectStyles.title}>PROJECTS</h1>
         {data?.map(project => (
           <ProjectCard
-            key={project.link}
+            key={project.slug}
             {...project}
           />
         ))}
@@ -28,7 +28,7 @@ const projectStyles = {
     padding: `${spacing.topPadding} ${spacing.sidePadding} 0`
   }),
   title: css({
-    ...fontStyles.title,
+    fontSize: '4.3rem',
     marginBottom: '4.8rem'
   })
 }

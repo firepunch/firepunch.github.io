@@ -1,14 +1,17 @@
-import { css } from '@emotion/css'
+import { css, cx } from '@emotion/css'
+import { mq } from '../shared/variables'
 import FullImage from './FullImage'
 
 export default function ProjectCard({
+  hasDetail,
   slug,
   title,
   sub_title,
   link,
-  banner_img
+  banner_img,
+  className
 }) {
-  const aProps = slug ? {
+  const aProps = hasDetail ? {
     href: `projects/${slug}`,
   } : {
     href: link,
@@ -16,7 +19,7 @@ export default function ProjectCard({
   }
 
   return (
-    <article className={cardStyles.card}>
+    <article className={cx(cardStyles.card, className)}>
       <a {...aProps}>
         <figure className={cardStyles.thumbnailWrapper}>
           <FullImage

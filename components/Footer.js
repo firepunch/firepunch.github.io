@@ -1,6 +1,6 @@
 import { css } from '@emotion/css'
 
-import { colors, flexStyles, fontStyles, spacing } from '../shared/variables'
+import { colors, mq, flexStyles, fontStyles, spacing } from '../shared/variables'
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ const footerStyles = {
     ...flexStyles,
     gap: '2rem',
     textAlign: 'center',
-    padding: `4.8rem ${spacing.doublePadding}`,
+    padding: `4.8rem ${spacing.sidePadding}`,
     'a:hover': {
       textDecorationLine: 'underline',
       textDecorationStyle: 'wavy',
@@ -52,6 +52,10 @@ const footerStyles = {
   nav: css({
     ...flexStyles,
     flexDirection: 'row',
+    gap: '3rem',
+    [`${mq[0]}`]: {
+      fontSize: '1.6rem'
+    }
   }),
   lower: css({
     color: colors.grey[200],

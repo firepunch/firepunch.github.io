@@ -1,5 +1,6 @@
 [{
   "featured": true,
+  "hasDetail": true,
   "slug": "ideas-on-board",
   "title": "Ideas on Board",
   "link": "https://iob.team",
@@ -7,19 +8,19 @@
   "banner_img": "/images/iob/thumbnail.webp"
 }, {
   "featured": true,
-  "slug": null,
+  "slug": "walkies",
   "title": "Walkies",
   "link": "https://goforwalkies.bcitwebdeveloper.ca",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
   "banner_img": "/images/walkies/thumbnail.webp"
 }, {
-  "slug": null,
+  "slug": "cinemark",
   "title": "Cinemark",
   "link": "https://cinemark.firepunch.buzz",
   "sub_title": "Curating business content to enter the Southeast Asian market.",
   "banner_img": "/images/cinemark/thumbnail.webp"
 }, {
-  "slug": null,
+  "slug": "creame",
   "title": "Creame",
   "link": "https://play.google.com/store/apps/details?id=in.creame",
   "sub_title": "Curating business content to enter the Southeast Asian market.",

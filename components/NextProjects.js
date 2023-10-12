@@ -23,7 +23,7 @@ export default function NextProjects({ currentSlug }) {
       </h2>
       {data.map(project => (
         <ProjectCard
-          key={project.link}
+          key={project.slug}
           {...project}
         />
       ))}
@@ -33,7 +33,7 @@ export default function NextProjects({ currentSlug }) {
 
 const projectStyles = {
   self: css({
-    padding: `0 ${spacing.doublePadding}`,
+    padding: `0 ${spacing.sidePadding}`,
     marginBottom: '8rem'
   }),
   title: css({

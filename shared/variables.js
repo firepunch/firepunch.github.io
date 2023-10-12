@@ -1,6 +1,6 @@
 export const mq = [
-  `@media (min-width: 1024px)`,
-  `@media (min-width: 768px)`
+  `@media (min-width: 768px)`,
+  `@media (min-width: 1024px)`
 ]
 
 export const flexStyles = {
@@ -14,7 +14,7 @@ export const flexStyles = {
 export const spacing = {
   topPadding: '4.8rem',
   sidePadding: '2rem',
-  doublePadding: '2rem'
+  pcSidePadding: '5rem'
 }
 
 export const colors = {
@@ -50,9 +50,8 @@ export const fontStyles = {
       fontWeight: 600,
     }
   },
-  title: {
-    fontSize: '4.3rem',
-  }
+  xLarge: '4.8rem',
+  large: '2.6rem',
 }
 
 export const wavyLink = {

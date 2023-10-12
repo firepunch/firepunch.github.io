@@ -1,6 +1,6 @@
 import { css, cx } from '@emotion/css'
 import Image from 'next/image'
-import { spacing, flexStyles, colors } from '../../shared/variables'
+import { spacing, flexStyles, mq } from '../../shared/variables'
 import EmailButton from './EmailButton'
 
 export default function Contact() {
@@ -20,10 +20,13 @@ export default function Contact() {
 
 const contactStyles = {
   self: css({
-    margin: `8rem ${spacing.doublePadding}`,
+    margin: `8rem ${spacing.sidePadding}`,
   }),
   font: css({
     fontSize: '2.4rem',
+    [`${mq[0]}`]: {
+      fontSize: '4.6rem',
+    }
   }),
   title: css({
     ...flexStyles,

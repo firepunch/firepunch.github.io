@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontStyles, spacing } from './variables'
+import { colors, fontStyles, mq } from './variables'
 
 export const globalStyles = css`
   * {
@@ -20,6 +20,11 @@ export const globalStyles = css`
     font-size: 1.8rem;
     margin: 0;
     ${fontStyles.regular}
+    ${mq[0]} {
+      font-size: 2rem;
+      max-width: 136rem;
+      margin: 0 auto;
+    }
   }
   .main {
     position: relative;
@@ -31,6 +36,9 @@ export const globalStyles = css`
     margin: 0;
     font-size: 1.8rem;
     ${fontStyles.semiBold}
+    ${mq[0]} {
+      font-size: 2rem;
+    }
   }
   p, figure {
     margin: 0;
