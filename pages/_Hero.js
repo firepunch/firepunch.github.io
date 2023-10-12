@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className={heroStyles.hero}>
       <h1 className={heroStyles.title}>
-        Hello! I’m a frontend engineer<br />building user-centric products.
+        Hello! I’m a frontend engineer building user-centric products.
       </h1>
       <h2 className={heroStyles.subTitle}>
         I help simplify complex problems and organize them into processes to improve efficiency.
