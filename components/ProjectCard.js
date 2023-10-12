@@ -1,15 +1,15 @@
-import { css, cx } from '@emotion/css'
-import { colors, mq } from '../shared/variables'
+import { css, cx, keyframes } from '@emotion/css'
+import { flexStyles, colors, mq } from '../shared/variables'
 import FullImage from './FullImage'
 
 export default function ProjectCard({
+  className,
   hasDetail,
   slug,
   title,
-  sub_title,
   link,
+  sub_title,
   banner_img,
-  className
 }) {
   const aProps = hasDetail ? {
     href: `projects/${slug}`,
@@ -22,6 +22,9 @@ export default function ProjectCard({
     <article className={cx(cardStyles.card, className)}>
       <a {...aProps}>
         <figure className={cardStyles.thumbnailWrapper}>
+          <span className={cardStyles.cta}>
+            {hasDetail ? 'View\ncase' : 'View\nproject'}
+          </span>
           <FullImage
             src={banner_img}
             alt="Project Banner"
@@ -39,6 +42,15 @@ export default function ProjectCard({
   )
 }
 
+const ctaZoom = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const cardStyles = {
   card: css({
     marginBottom: '8rem',
@@ -47,9 +59,21 @@ const cardStyles = {
     },
     [`${mq[0]}`]: {
       marginBottom: 0,
+    },
+    '&:hover': {
+      'a span': {
+        width: '15rem',
+        height: '15rem',
+        zoom: 1,
+        opacity: 1,
+      },
+      img: {
+        transform: 'scale(1.1)',
+      },
     }
   }),
   thumbnailWrapper: css({
+    position: 'relative',
     width: '100%',
     backgroundColor: colors.grey[130],
     marginBottom: '1rem',
@@ -58,11 +82,26 @@ const cardStyles = {
   }),
   thumbnail: css({
     height: '100%',
-    transition: 'transform .7s ease-in-out',
     overflow: 'hidden',
-    '&:hover': {
-      transform: 'scale(1.2)',
-    }
+    transition: 'transform .6s ease-in-out',
+  }),
+  cta: css({
+    ...flexStyles,
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: '7rem',
+    height: '7rem',
+    whiteSpace: 'pre',
+    textAlign: 'center',
+    fontSize: '1.8rem',
+    opacity: 0,
+    color: colors.black,
+    background: colors.grey[100],
+    borderRadius: '50%',
+    zIndex: 2,
+    transform: 'translate(-50%, -50%)',
+    transition: 'all .6s ease-in-out',
   }),
   title: css({
     marginBottom: '0.4rem',
