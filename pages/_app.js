@@ -1,15 +1,15 @@
+import React from 'react'
 import Head from 'next/head';
+import Script from 'next/script'
 import createCache from '@emotion/cache'
 import { CacheProvider, Global } from '@emotion/react'
-import Script from 'next/script'
-import React from 'react'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ScrollToTop from '../components/ScrollToTop'
 import { globalStyles } from '../shared/globalStyles'
 
-const cache = createCache({ key: 'next' })
+const cache = createCache({ key: 'firepunch' })
 
 export default function App({ Component, pageProps }) {
   return (
