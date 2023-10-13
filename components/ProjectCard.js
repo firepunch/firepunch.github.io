@@ -1,6 +1,7 @@
-import { css, cx, keyframes } from '@emotion/css'
-import { flexStyles, colors, mq } from '../shared/variables'
-import FullImage from './FullImage'
+import { css, cx } from "@emotion/css"
+import { colors, flexStyles, mq } from "../shared/variables"
+import { THUMBNAIL } from "../constants/imagePath"
+import FullImage from "./FullImage"
 
 export default function ProjectCard({
   className,
@@ -9,7 +10,6 @@ export default function ProjectCard({
   title,
   link,
   sub_title,
-  banner_img,
 }) {
   const aProps = hasDetail ? {
     href: `projects/${slug}`,
@@ -26,9 +26,10 @@ export default function ProjectCard({
             {hasDetail ? 'View\ncase' : 'View\nproject'}
           </span>
           <FullImage
-            src={banner_img}
-            alt="Project Banner"
+            src={THUMBNAIL[slug]}
+            alt={`${title} Banner`}
             className={cardStyles.thumbnail}
+            priority={slug === 'ideas-on-board'}
           />
         </figure>
         <h3 className={cardStyles.title}>
@@ -41,15 +42,6 @@ export default function ProjectCard({
     </article>
   )
 }
-
-const ctaZoom = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
 
 const cardStyles = {
   card: css({

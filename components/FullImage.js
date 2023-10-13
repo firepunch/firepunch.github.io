@@ -6,8 +6,7 @@ export default function FullImage({ src, className, ...props }) {
     <Image
       src={src}
       alt="Image"
-      width={0}
-      height={0}
+      placeholder="blur"
       sizes='100vw'
       className={cx(css`width: 100%; max-width: 100%; height: auto;`, className)}
       {...props}

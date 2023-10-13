@@ -1,12 +1,21 @@
-import React from 'react'
 import { css, cx } from '@emotion/css'
+import React from 'react'
 
-import data from '../../_projects/iob.json'
+import data from '../../_projects/iob/index.json'
 import Contact from '../../components/Contact'
 import FullImage from '../../components/FullImage'
 import NextProjects from '../../components/NextProjects'
 import { removeProtocol } from '../../lib/utils'
 import { flexStyles, fontStyles, mq, spacing, wavyLink } from '../../shared/variables'
+import { THUMBNAIL } from '../../constants/imagePath'
+
+import CtaImg from '../../_projects/iob/cta.webp'
+import DesktopImg from '../../_projects/iob/desktop.webp'
+
+const ASSETS = {
+  cta: CtaImg,
+  desktop: DesktopImg,
+}
 
 export default function IdeasOnBoard() {
   return (
@@ -44,7 +53,7 @@ export default function IdeasOnBoard() {
           </div>
           <FullImage
             className={projectStyles.banner}
-            src={data.banner_img}
+            src={THUMBNAIL[data.slug]}
             alt="Story cards from IOB"
           />
         </section>
@@ -57,7 +66,11 @@ export default function IdeasOnBoard() {
               </p>
             ))}
           </div>
-          <FullImage className={projectStyles.intro_img} src={data.intro_img} alt="Desktop screenshot from IOB" />
+          <FullImage
+            src={ASSETS[data.intro_img]}
+            alt="Desktop screenshot from IOB"
+            className={projectStyles.intro_img}
+          />
         </section>
 
         <section className={projectStyles.contentSection}>
@@ -66,7 +79,7 @@ export default function IdeasOnBoard() {
               <h3>{feature.name}</h3>
               <p>{feature.content}</p>
               {feature.type === 'image' ? (
-                <FullImage src={feature.src} alt={feature.alt} />
+                <FullImage src={ASSETS[feature.src]} alt={feature.alt} />
               ) : (
                 <video poster={feature.poster} autoPlay playsInline loop muted width="100%">
                   <source src={feature.src} type="video/mp4" />

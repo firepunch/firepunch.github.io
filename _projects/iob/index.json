@@ -15,7 +15,7 @@
     "WordPress Development",
     "Design Review"
   ],
-  "intro_img": "/images/iob/desktop.webp",
+  "intro_img": "desktop",
   "intro": [
     "My work encompassed user experience, and created a scalable headless content management system (CMS) using WordPress and Next.js.",
     "This choice was motivated by its ability to simplify content publishing for editors while ensuring a secure database and improving loading speed.",
@@ -23,14 +23,14 @@
   ],
   "features": [{
     "type": "image",
-    "src": "/images/iob/cta.webp",
+    "src": "cta",
     "alt": "Require sign up to continue reading content.",
     "name": "To continue reading, please sign in.",
     "content": "The goal of this project was to convert visitors' actions into either membership registrations or project requests. To achieve this, I implemented a registration wall, requiring users to register for full access to the content."
   }, {
     "type": "video",
-    "src": "/images/iob/note.mp4",
-    "poster": "/images/iob/note_thumb.jpg",
+    "src": "/assets/iob_note.mp4",
+    "poster": "/assets/iob_note_thumb.webp",
     "name": "Got an idea?",
     "content": "I developed a feature called 'Idea Notes' that allows users to read posts and leave their thoughts. I created a PHP REST API that utilizes WordPress database and managed the data using Zustand on the frontend. I ensured that the layout remains consistent throughout different actions within the notes and made it possible for users to easily check ideas from their My Page."
   }],
