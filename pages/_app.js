@@ -16,13 +16,14 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Mirim Yu | FrontEnd Engineer</title>
-        <meta charSet='UTF-8' />
-        <meta name="description" content="Front-End Engineer Portfolio" />
+        <meta charSet="UTF-8" />
+        <meta name="description" content="FrontEnd Engineer Portfolio" />
         <meta name="author" content="Firepunch" />
         <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, React, Next.js, Emotion, Cypress, Testing, Jest, Storybook" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#000000" />
+        <meta name="google-site-verification" content="yUK512LxszenpbszcJoMQ8P9AuWTDgW8Ih75Ab1Ahk8" />
       </Head>
       <CacheProvider value={cache}>
         <Global styles={globalStyles} />
