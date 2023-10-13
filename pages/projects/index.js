@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import Head from 'next/head'
 import React from 'react'
 
 import data from '../../_projects/summary.json'
@@ -9,6 +10,9 @@ import { mq, spacing } from '../../shared/variables'
 export default function Projects() {
   return (
     <>
+      <Head>
+        <title>Mirim Yu | Projects</title>
+      </Head>
       <section className={projectStyles.wrapper}>
         <h1 className={projectStyles.title}>PROJECTS</h1>
         {data?.map(project => (

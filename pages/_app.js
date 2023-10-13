@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head';
+import Head from 'next/head'
 import Script from 'next/script'
 import createCache from '@emotion/cache'
 import { CacheProvider, Global } from '@emotion/react'
@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Mirim Yu — FrontEnd Engineer</title>
+        <title>Mirim Yu | FrontEnd Engineer</title>
         <meta charSet='UTF-8' />
         <meta name="description" content="Front-End Engineer Portfolio" />
         <meta name="author" content="Firepunch" />

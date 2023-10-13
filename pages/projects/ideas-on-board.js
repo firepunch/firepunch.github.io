@@ -1,4 +1,5 @@
 import { css, cx } from '@emotion/css'
+import Head from 'next/head'
 import React from 'react'
 
 import data from '../../_projects/iob/index.json'
@@ -20,6 +21,9 @@ const ASSETS = {
 export default function IdeasOnBoard() {
   return (
     <>
+      <Head>
+        <title>Mirim Yu | I.O.B</title>
+      </Head>
       <article className={projectStyles.project}>
         <section className={projectStyles.summarySection}>
           <div className={projectStyles.summaryContent}>
