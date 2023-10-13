@@ -7,7 +7,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ScrollToTop from '../components/ScrollToTop'
-import { globalStyles } from '../shared/styles'
+import { globalStyles } from '../shared/globalStyles'
 
 const cache = createCache({ key: 'next' })
 
