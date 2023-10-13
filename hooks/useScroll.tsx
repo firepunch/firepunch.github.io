@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const debounce = (func, timeout = 300) => {
   let timer
@@ -15,7 +15,7 @@ const useHasScroll = (): string => {
     (typeof window == 'undefined' || MINIMUM_Y > window.scrollY ) ? 'top' : window.scrollY > MAXIMUM_Y ? 'end' : 'mid'
   )
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const updateScroll = (): void => {
       setScrollPos(
         (typeof window == 'undefined' || MINIMUM_Y > window.scrollY ) ? 'top' : window.scrollY > MAXIMUM_Y ? 'end' : 'mid'
@@ -25,7 +25,7 @@ const useHasScroll = (): string => {
     return (): void => {
       window.removeEventListener('scroll', updateScroll)
     }
-  }, [])
+  })
 
   return scrollPos
 }
