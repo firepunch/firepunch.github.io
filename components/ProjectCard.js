@@ -46,21 +46,21 @@ export default function ProjectCard({
 const cardStyles = {
   card: css({
     marginBottom: '8rem',
-    '&:last-child': {
-      marginBottom: 0
-    },
+    borderRadius: '1rem',
+    transition: 'transform .6s ease-in-out',
     [`${mq[0]}`]: {
       marginBottom: 0,
     },
+    '&:last-child': {
+      marginBottom: 0
+    },
     '&:hover': {
+      transform: 'translateY(-8px)',
       'a span': {
         width: '15rem',
         height: '15rem',
         zoom: 1,
         opacity: 1,
-      },
-      img: {
-        transform: 'scale(1.1)',
       },
     }
   }),
@@ -75,7 +75,6 @@ const cardStyles = {
   thumbnail: css({
     height: '100%',
     overflow: 'hidden',
-    transition: 'transform .6s ease-in-out',
   }),
   cta: css({
     ...flexStyles,
