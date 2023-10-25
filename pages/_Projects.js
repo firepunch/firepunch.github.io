@@ -24,7 +24,7 @@ export default function Projects() {
           Early on at <a href="https://madup.com/en.html" target="_blank">Madup</a> I built main products for both internal and <a href="https://lever.me" target="_blank">external</a> users and <a href="https://tech.madup.com/">blog</a>.
         </p>
       </article>
-      <article className='view-all'>
+      <article className="view-all">
         <a href="/projects" className={projectStyles.viewAllBtn}>
           View all
         </a>
@@ -84,7 +84,11 @@ const projectStyles = {
       fontSize: '2.4rem',
       margin: '0 auto',
       borderRadius: '50%',
-      animation: `${spin} 10s linear .01s infinite`
+      animation: `${spin} 10s linear .01s infinite`,
+      '&:hover': {
+        color: colors.white,
+        background: colors.black,
+      },
     }
   })
 }
